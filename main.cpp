@@ -6,6 +6,7 @@ int main()
 {
   char input;
   vector <string> list;
+  int i;
 
   do
   {
@@ -25,6 +26,14 @@ int main()
         list.push_back(item);
     }
   }while( input != 'q' && input != 'Q' );
-    
+
+  if(list.size() > 0) {
+    for(i = 0; i < list.size(); i++) {
+      std::cout << i+1 << " " << list[i] << std::endl;
+    }
+  } else {
+    std::cout << "there are no items on the list." << std::endl;
+  }
+
   return 0;
 }
